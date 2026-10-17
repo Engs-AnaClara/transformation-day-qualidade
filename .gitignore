@@ -1,0 +1,23 @@
+# Dados e arquivos gerados NUNCA entram no repositório (material interno Renault)
+*.xlsx
+*.xls
+*.csv
+*.parquet
+*.pkl
+*.sql
+modelo.json
+modelo.js
+vins.js
+dashboard.js
+site.html
+Transformation_Qualidade*.html
+src/dashboard_painel.html
+teste_casos.json
+TESTE.md
+analise_dados_saida.txt
+lotes_em_alerta.csv
+*.pdf
+.env
+.venv/
+venv/
+__pycache__/

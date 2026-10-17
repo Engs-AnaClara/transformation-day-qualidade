@@ -1,0 +1,123 @@
+
+/* ===== acréscimos da versão 2 ===== */
+.badge{display:inline-block;border-radius:999px;padding:1px 9px;font-size:.72rem;font-weight:600;line-height:1.5;white-space:nowrap}
+.badge.alto{background:var(--azul);color:var(--sobre-azul)}
+.badge.medio{background:var(--azul-fundo);color:var(--azul);border:1px solid var(--azul-claro)}
+.badge.baixo{background:var(--cinza-fundo);color:var(--suave);border:1px solid var(--linha)}
+.badge.dem{background:var(--cinza-fundo);color:var(--texto);border:1px solid var(--linha)}
+.badge.dem.d0{background:var(--bordo);color:#fff;border-color:var(--bordo)}
+.badge.dem.d1{background:var(--bordo-fundo);color:var(--bordo);border-color:var(--bordo-claro)}
+.badge.fonte{background:var(--azul-fundo);color:var(--azul)}
+.badge.base-vin{background:var(--azul);color:var(--sobre-azul)}
+.badge.base-coorte{background:var(--bordo-fundo);color:var(--bordo);border:1px solid var(--bordo-claro)}
+.abas .aba-btn{white-space:nowrap}
+@media(max-width:900px){.barra .miolo{flex-direction:column;align-items:flex-start}.abas{overflow-x:auto;max-width:100%}}
+
+/* busca por VIN */
+.busca{position:relative;display:flex;gap:8px;align-items:stretch;max-width:560px}
+.busca input{flex:1;font-size:1.05rem;padding:11px 12px}
+.sugestoes{position:absolute;left:0;right:110px;top:100%;z-index:6;background:var(--cartao);border:1px solid var(--linha);border-radius:8px;margin-top:4px;box-shadow:0 6px 18px rgba(27,31,42,.18);max-height:260px;overflow:auto}
+.sugestoes[hidden]{display:none}
+.sugestoes button{display:flex;justify-content:space-between;gap:12px;width:100%;text-align:left;background:none;border:0;border-top:1px solid var(--linha);padding:8px 12px;color:var(--texto)}
+.sugestoes button:first-child{border-top:0}
+.sugestoes button:hover,.sugestoes button.sel{background:var(--azul-fundo)}
+.presenca{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0}
+.pres{border:1px solid var(--linha);border-radius:10px;padding:6px 12px;background:var(--cartao)}
+.pres b{display:block;font-size:.8rem}
+.pres.sim{border-color:var(--azul);background:var(--azul-fundo)}
+.pres.nao{color:var(--suave);border-style:dashed}
+.linha-tempo{position:relative;margin:6px 0 0 8px;padding-left:22px;border-left:3px solid var(--azul-claro)}
+.evento{position:relative;margin:0 0 14px;background:var(--cartao);border:1px solid var(--linha);border-radius:10px;padding:10px 14px}
+.evento::before{content:"";position:absolute;left:-31px;top:14px;width:13px;height:13px;border-radius:50%;background:var(--azul);border:3px solid var(--fundo)}
+.evento.aves::before{background:var(--cinza)}
+.evento.gmf::before{background:var(--bordo)}
+.evento h4{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:4px}
+.evento .data{margin-left:auto;font-weight:400;color:var(--suave);font-size:.8rem}
+.campos{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:4px 16px;font-size:.86rem}
+.campos span{color:var(--suave);display:block;font-size:.74rem}
+.frase{font-size:1.05rem;border-left:5px solid var(--bordo);background:var(--bordo-fundo);border-radius:8px;padding:12px 16px}
+.hl td{background:var(--bordo-fundo)}
+.hl td:first-child{box-shadow:inset 4px 0 0 var(--bordo)}
+.vin-chip{display:inline-block;margin:2px 4px 2px 0;border:1px solid var(--azul-claro);color:var(--azul);background:var(--azul-fundo);border-radius:6px;padding:1px 8px;font-size:.8rem}
+button.vin-chip{cursor:pointer}
+.tres{display:grid;gap:14px}
+@media(min-width:1000px){.tres{grid-template-columns:repeat(3,1fr)}}
+.tres .cartao{margin:0}
+.tres h4{display:flex;align-items:center;gap:8px;margin-bottom:6px}
+.tres ul{margin:4px 0 0;padding-left:18px}
+.faixa-corr{border:1px solid var(--linha);border-left:5px solid var(--bordo);border-radius:10px;background:var(--cartao);padding:10px 14px;margin-top:14px}
+.faixa-corr .linhas{display:grid;gap:8px;margin-top:6px}
+.faixa-corr .l{display:flex;gap:10px;align-items:flex-start}
+.faixa-corr .l>div{flex:1}
+.grande{font-size:1.05rem;padding:12px 28px}
+.mini{font-size:.78rem}
+details.sec{margin-top:14px}
+details.sec>summary{cursor:pointer;font-weight:600;font-size:1.02rem;padding:4px 0}
+.ctrl{display:flex;flex-wrap:wrap;gap:10px 18px;align-items:flex-end;margin:6px 0 12px}
+.ctrl label{margin:0}
+.ctrl select,.ctrl input{width:auto;min-width:130px}
+.barra-dupla{display:grid;gap:3px}
+.serie{display:flex;align-items:flex-end;gap:8px;height:120px;margin-top:6px}
+.serie div{flex:1;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;height:100%;font-size:.7rem;color:var(--suave)}
+.serie i{display:block;width:100%;border-radius:4px 4px 0 0;min-height:2px;background:var(--azul)}
+.serie i.alta{background:var(--bordo)}
+.serie .ref{position:absolute}
+.alerta{border:1px solid var(--linha);border-left:5px solid var(--bordo);border-radius:10px;background:var(--cartao);padding:10px 14px;margin:0 0 10px}
+.alerta.baixo{border-left-color:var(--cinza)}
+.alerta.medio{border-left-color:var(--azul-claro)}
+.alerta h4{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.drop{border:2px dashed var(--azul-claro);border-radius:12px;padding:16px;text-align:center;background:var(--azul-fundo)}
+.drop.sobre{border-color:var(--bordo)}
+.pesos{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:flex-end}
+.pesos label{margin:0;font-size:.8rem}
+.pesos input{width:70px}
+.rolagem{overflow-x:auto}
+th.ord{cursor:pointer;color:var(--azul)}
+.dim{opacity:.55}
+@media print{.barra,.topo .btn,.faixa{display:none}}
+
+/* pontos em comum (aba 1) */
+.cmp-lista{list-style:none;margin:6px 0 0;padding:0;display:grid;gap:6px}
+.cmp{display:flex;gap:10px;align-items:flex-start}
+.cmp .marca{flex:none;width:22px;height:22px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-weight:700;font-size:.8rem}
+.cmp.ok .marca{background:var(--azul);color:var(--sobre-azul)}
+.cmp.nao .marca{background:var(--cinza-fundo);color:var(--suave);border:1px solid var(--linha)}
+.cmp.nao>div{color:var(--suave)}
+.par{border:1px solid var(--linha);border-radius:10px;padding:8px 12px;margin-top:10px;background:var(--cartao)}
+.par-t{font-weight:600;margin-bottom:2px}
+
+/* nota do filtro G057 (informativa, pode ser fechada) */
+.faixa.info{background:var(--azul-fundo);border-bottom:1px solid var(--azul-claro)}
+.faixa.info b{color:var(--azul)}
+.faixa.info .miolo{display:flex;gap:12px;align-items:flex-start;justify-content:space-between}
+.faixa[hidden]{display:none}
+.fechar-faixa{flex:none;background:none;border:0;color:var(--suave);font-size:1.3rem;line-height:1;padding:0 6px;cursor:pointer}
+.fechar-faixa:hover{color:var(--bordo)}
+
+/* dashboard embutida (aba 5) */
+.dash-frame{width:100%;height:calc(100vh - 190px);min-height:680px;border:1px solid var(--linha);border-radius:12px;background:#fff;display:block}
+
+/* recorrência (aba 3) */
+.rec{display:inline-flex;gap:3px}
+.rec i{font-style:normal;min-width:26px;text-align:center;font-size:.72rem;padding:2px 3px;border-radius:5px;border:1px solid var(--linha);background:var(--cinza-fundo);color:var(--suave)}
+.rec i.on{background:var(--azul);border-color:var(--azul);color:var(--sobre-azul);font-weight:600}
+.rec i.sd{opacity:.5}
+.rec i.hoje{outline:2px solid var(--bordo);outline-offset:1px}
+
+/* recorrência como colunas de meses (aba 3) */
+table.tab-rec th.grupo{text-align:center;border-bottom:1px solid var(--linha);color:var(--azul);font-weight:600;font-size:.76rem}
+table.tab-rec th.mes-h{min-width:62px;font-size:.74rem}
+table.tab-rec th.mes-h.atual{color:var(--bordo);background:var(--bordo-fundo)}
+table.tab-rec td.mes-c{background:transparent;color:var(--suave)}
+table.tab-rec td.mes-c.on{background:var(--azul-fundo);color:var(--azul);font-weight:600}
+table.tab-rec td.mes-c.atual,table.tab-rec td.mes-c.atual.on{background:var(--bordo-fundo);color:var(--bordo);font-weight:600}
+table.tab-rec td.mes-c.atual.sd{opacity:1}
+table.tab-rec td.mes-c.sd{opacity:.5}
+.mes-on{background:var(--azul-fundo);color:var(--azul);font-weight:600;padding:0 6px;border-radius:4px}
+
+/* rosa do mês escolhido (aba 3) */
+:root{--rosa:#F8D9E2;--rosa-txt:#7A1530}
+@media (prefers-color-scheme:dark){:root:not([data-tema="claro"]){--rosa:#6A2A40;--rosa-txt:#FFD3DF}}
+:root[data-tema="escuro"]{--rosa:#6A2A40;--rosa-txt:#FFD3DF}
+table.tab-rec th.mes-h.atual{background:var(--rosa);color:var(--rosa-txt)}
+table.tab-rec td.mes-c.atual,table.tab-rec td.mes-c.atual.on{background:var(--rosa);color:var(--rosa-txt);font-weight:600}

@@ -1,0 +1,74 @@
+<header class="topo">
+  <div class="miolo">
+    <div>
+      <h1>Transformation Day · Qualidade</h1>
+      <div class="sub">Fazer fábrica (DPHU), auditoria (AVES) e garantia (GMF) conversarem pelo VIN, para resolver o problema antes de virar insatisfação. Roda no seu navegador; nenhum dado sai deste computador.</div>
+    </div>
+    <button class="btn sec" id="btnTema" type="button" title="Alternar claro / escuro">Tema: automático</button>
+  </div>
+</header>
+<div class="faixa info" id="faixaG" role="note"><div class="miolo"><span><b>Filtro "Excluir G057":</b> o G057 (consumo de óleo alto) é cerca de 46% do GMF e, pelos dados, se concentra em revisões de 10.000 km, e não em defeitos. Por isso existe o interruptor "Excluir G057" aqui ao lado: ligue para ver tudo sem ele.</span><button type="button" class="fechar-faixa" id="fechaFaixa" aria-label="Fechar esta nota" title="Fechar">×</button></div></div>
+
+<div class="barra">
+  <div class="miolo">
+    <div class="abas" role="tablist">
+      <button class="aba-btn" role="tab" id="t1" aria-selected="true" data-aba="aba1">1 · Busca por VIN</button>
+      <button class="aba-btn" role="tab" id="t2" aria-selected="false" data-aba="aba2">2 · Do cliente para o problema</button>
+      <button class="aba-btn" role="tab" id="t3" aria-selected="false" data-aba="aba3">3 · Alertas e sugestões</button>
+      <button class="aba-btn" role="tab" id="t4" aria-selected="false" data-aba="aba4">4 · Prioridades</button>
+      <button class="aba-btn" role="tab" id="t5" aria-selected="false" data-aba="aba5">5 · Dashboard</button>
+    </div>
+    <label class="sw" style="margin:0"><input type="checkbox" id="swG057" aria-describedby="swEstado"><span>Excluir G057</span><span class="estado" id="swEstado">G057 incluído</span></label><button type="button" class="ajuda" data-aj="g057" data-onde="topo" aria-label="Por que existe o filtro Excluir G057" title="Por que existe o filtro Excluir G057" aria-expanded="false">?</button>
+  </div>
+</div>
+
+<main class="miolo">
+  <div id="erro" class="aviso bordo" hidden></div>
+
+  <!-- ===================== ABA 1 · BUSCA POR VIN ===================== -->
+  <section id="aba1" class="aba ativa" role="tabpanel" aria-labelledby="t1">
+    <div class="cartao">
+      <h3>Qual carro você quer ver? <button type="button" class="ajuda" data-aj="busca" aria-label="Mais informações" title="Mais informações" aria-expanded="false">?</button></h3>
+      <div class="busca">
+        <input type="text" id="vinq" placeholder="Ex.: VIN-000001" autocomplete="off" aria-label="VIN" aria-autocomplete="list" aria-controls="vinsug">
+        <button class="btn" id="vinGo" type="button">Buscar</button>
+        <div class="sugestoes" id="vinsug" role="listbox" hidden></div>
+      </div>
+      <p class="suave mini" style="margin:8px 0 0">Aceita espaços e minúsculas ("vin 1", "VIN-000001"). Para testar: VIN-000001.</p>
+    </div>
+    <div id="vinSaida"></div>
+  </section>
+
+  <!-- ===================== ABA 2 · DO CLIENTE PARA O PROBLEMA ===================== -->
+  <section id="aba2" class="aba" role="tabpanel" aria-labelledby="t2">
+    <div class="grade dois">
+      <div class="cartao">
+        <h3>Reclamação do cliente</h3>
+        <label for="a2modelo">Modelo</label>
+        <select id="a2modelo"></select>
+        <label for="a2texto">O que o cliente disse <span class="opc">(português)</span></label>
+        <textarea id="a2texto" placeholder="Ex.: cliente alega luz de injeção acesa no painel"></textarea>
+        <div class="exemplos" id="a2ex"></div>
+        <div class="duas">
+          <div><label for="a2km">Km <span class="opc">(opcional)</span></label><input type="number" id="a2km" min="0" step="100" placeholder="ex.: 10200"></div>
+          <div><label for="a2mis">Meses de uso <span class="opc">(opcional)</span></label><input type="number" id="a2mis" min="0" max="36" step="1" placeholder="ex.: 4"></div>
+        </div>
+        <div style="margin-top:16px"><button class="btn grande" id="a2go" type="button">Analisar</button></div>
+        <p class="suave mini" style="margin-top:10px">As porcentagens são estimativas do modelo, não certezas.</p>
+      </div>
+      <div id="a2saida"></div>
+    </div>
+  </section>
+
+  <!-- ===================== ABA 3 · ALERTAS E SUGESTÕES ===================== -->
+  <section id="aba3" class="aba" role="tabpanel" aria-labelledby="t3">
+    <div class="aviso azul"><b>Associação estatística, não prova de causa.</b> Cada alerta mostra o nível de evidência (alto, médio ou baixo) e quantos carros sustentam a conta.</div>
+    <div id="a3saida"></div>
+  </section>
+
+  <!-- ===================== ABA 4 · PRIORIDADES ===================== -->
+  <section id="aba4" class="aba" role="tabpanel" aria-labelledby="t4"><div id="a4saida"></div></section>
+
+  <!-- ===================== ABA 5 · SOBRE O MODELO ===================== -->
+  <section id="aba5" class="aba" role="tabpanel" aria-labelledby="t5"><div id="a5saida"></div></section>
+</main>
