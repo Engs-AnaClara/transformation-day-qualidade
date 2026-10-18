@@ -2,7 +2,7 @@
 
 Site que faz as tabelas **DPHU** (fábrica), **AVES** (auditoria) e **GMF** (garantia) conversarem pelo **VIN**, para enxergar o problema cedo, antes de virar insatisfação do cliente. O site roda 100% no navegador, sem servidor.
 
-> **Este repositório contém apenas código. Não há dados, planilhas, modelos treinados nem arquivos gerados.** Eles são material interno da Renault e ficam fora do GitHub (veja o `.gitignore`).
+> **Este repositório contém apenas código. Não há dados, planilhas, modelos treinados nem arquivos gerados.** Eles são material confidencial e ficam fora do GitHub (veja o `.gitignore`).
 
 ## Como funciona
 1. `treinar.py` lê as planilhas, treina o classificador de texto (TF-IDF + regressão logística, calibrado) e, com o `agregados.py`, calcula as correlações por VIN, alertas e cubos de prioridade. Gera `modelo.js`/`modelo.json` e `vins.js`.
@@ -11,7 +11,7 @@ Site que faz as tabelas **DPHU** (fábrica), **AVES** (auditoria) e **GMF** (gar
 4. `testar.py` valida o site contra o Python (probabilidades iguais).
 
 ## Como rodar
-Precisa das planilhas da Renault (não incluídas), Python 3.12, e Node 22 só para o teste.
+Precisa das planilhas (não incluídas), Python 3.12, e Node 22 só para o teste.
 
 ```bash
 python3 -m venv .venv
